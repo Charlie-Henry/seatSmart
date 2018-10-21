@@ -1,0 +1,26 @@
+<script src="processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+int seatValue;
+PShape seat; 
+void setup()
+{
+	size(200,200);
+	background(125);
+	fill(255);
+	PFont fontA = loadFont("courier");
+	textFont(fontA, 14);  
+
+
+
+	//seatValue = int(val[0]);
+	//println(seatValue);
+	//size(500,500);
+	String [] val = loadStrings("https://api.thingspeak.com/channels/606482/fields/1/last.txt");  
+}
+
+void draw(){  
+  text("Hello Web!",20,20);
+}
+</script>
+<canvas id="mycanvas"></canvas>
